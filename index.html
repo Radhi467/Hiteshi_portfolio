@@ -1,0 +1,1508 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✨</text></svg>" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hiteshi Bhardwaj | B.Tech Student & AI Enthusiast</title>
+  <meta name="description" content="Portfolio of Hiteshi Bhardwaj - B.Tech Student at JECRC University, AI & Technology Enthusiast." />
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0f7ff',
+              100: '#e0effe',
+              200: '#bae0fd',
+              300: '#7cc7fb',
+              400: '#38a9f6',
+              500: '#0e8ce4',
+              600: '#026fc3',
+              700: '#03589e',
+              800: '#074c82',
+              900: '#0c3f6c',
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            display: ['Outfit', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    body {
+      background-color: #080b12;
+      color: #e2e8f0;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .glass-card {
+      background: rgba(17, 24, 39, 0.7);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .glass-card-hover {
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .glass-card-hover:hover {
+      background: rgba(23, 32, 54, 0.85);
+      border-color: rgba(56, 169, 246, 0.35);
+      box-shadow: 0 12px 30px -10px rgba(14, 140, 228, 0.15);
+      transform: translateY(-3px);
+    }
+    .gradient-text {
+      background: linear-gradient(135deg, #38bdf8 0%, #818cf8 50%, #c084fc 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    /* Custom subtle scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #080b12;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1e293b;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #334155;
+    }
+  </style>
+</head>
+<body class="bg-[#080b12] text-slate-100 overflow-x-hidden selection:bg-brand-500 selection:text-white">
+
+  <!-- NAVBAR -->
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4 bg-[#080b12]/85 backdrop-blur-md border-b border-slate-800/80 shadow-lg shadow-black/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between">
+        
+        <!-- Logo -->
+        <a href="#hero" class="flex items-center gap-2.5 group cursor-pointer">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 via-indigo-600 to-purple-600 flex items-center justify-center font-display font-bold text-lg text-white shadow-md shadow-brand-500/20 group-hover:scale-105 transition-transform">
+            HB
+          </div>
+          <div class="flex flex-col">
+            <span class="font-display font-bold text-slate-100 tracking-tight text-base sm:text-lg group-hover:text-brand-400 transition-colors">
+              Hiteshi Bhardwaj
+            </span>
+            <span class="text-[11px] font-medium text-slate-400 -mt-1 hidden sm:block">
+              B.Tech • JECRC University
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center gap-1 lg:gap-2 bg-slate-900/60 p-1.5 rounded-full border border-slate-800/80 backdrop-blur-md">
+          <a href="#hero" class="px-3.5 py-1.5 rounded-full text-xs lg:text-sm font-medium text-white bg-brand-500 shadow-sm shadow-brand-500/40">Home</a>
+          <a href="#about" class="px-3.5 py-1.5 rounded-full text-xs lg:text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 transition-all">About</a>
+          <a href="#education" class="px-3.5 py-1.5 rounded-full text-xs lg:text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 transition-all">Education</a>
+          <a href="#skills" class="px-3.5 py-1.5 rounded-full text-xs lg:text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 transition-all">Skills</a>
+          <a href="#projects" class="px-3.5 py-1.5 rounded-full text-xs lg:text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 transition-all">Projects</a>
+          <a href="#achievements" class="px-3.5 py-1.5 rounded-full text-xs lg:text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 transition-all">Achievements</a>
+          <a href="#contact" class="px-3.5 py-1.5 rounded-full text-xs lg:text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 transition-all">Contact</a>
+        </nav>
+
+        <!-- Right Action Button -->
+        <div class="hidden lg:flex items-center gap-3">
+          <a href="#contact" class="px-4 py-2 text-xs font-semibold rounded-lg bg-gradient-to-r from-brand-600 to-indigo-600 hover:from-brand-500 hover:to-indigo-500 text-white shadow-md shadow-brand-600/20 transition-all flex items-center gap-1.5">
+            <span>Connect</span>
+            <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+          </a>
+        </div>
+
+        <!-- Mobile Hamburger Button -->
+        <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white">
+          <i data-lucide="menu" id="menuIcon" class="w-6 h-6"></i>
+        </button>
+
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobileMenu" class="hidden md:hidden bg-[#0a0d14]/95 backdrop-blur-xl border-b border-slate-800 px-5 pt-3 pb-6 mt-3 space-y-2">
+      <a href="#hero" class="mobile-nav-link block px-4 py-2.5 rounded-lg text-sm font-medium text-brand-300 bg-brand-600/20 border-l-4 border-brand-500">Home</a>
+      <a href="#about" class="mobile-nav-link block px-4 py-2.5 rounded-lg text-sm font-medium text-slate-300 hover:bg-slate-800/50 hover:text-white">About</a>
+      <a href="#education" class="mobile-nav-link block px-4 py-2.5 rounded-lg text-sm font-medium text-slate-300 hover:bg-slate-800/50 hover:text-white">Education</a>
+      <a href="#skills" class="mobile-nav-link block px-4 py-2.5 rounded-lg text-sm font-medium text-slate-300 hover:bg-slate-800/50 hover:text-white">Skills</a>
+      <a href="#projects" class="mobile-nav-link block px-4 py-2.5 rounded-lg text-sm font-medium text-slate-300 hover:bg-slate-800/50 hover:text-white">Projects</a>
+      <a href="#achievements" class="mobile-nav-link block px-4 py-2.5 rounded-lg text-sm font-medium text-slate-300 hover:bg-slate-800/50 hover:text-white">Achievements</a>
+      <a href="#contact" class="mobile-nav-link block px-4 py-2.5 rounded-lg text-sm font-medium text-slate-300 hover:bg-slate-800/50 hover:text-white">Contact</a>
+      <div class="pt-2">
+        <a href="#contact" class="mobile-nav-link w-full text-center block py-2.5 rounded-lg bg-gradient-to-r from-brand-600 to-indigo-600 text-white text-sm font-semibold shadow-md">
+          Get In Touch
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- 1. HERO SECTION -->
+  <section id="hero" class="relative min-h-screen flex items-center pt-28 pb-16 overflow-hidden">
+    <!-- Glowing orbs -->
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[550px] bg-brand-600/15 rounded-full blur-[140px] pointer-events-none -z-10"></div>
+    <div class="absolute top-1/3 right-10 w-[350px] h-[350px] bg-purple-600/15 rounded-full blur-[120px] pointer-events-none -z-10"></div>
+    <div class="absolute bottom-10 left-10 w-[300px] h-[300px] bg-cyan-600/10 rounded-full blur-[100px] pointer-events-none -z-10"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        
+        <!-- Left: Text & CTAs -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          
+          <!-- Pill badge -->
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/90 border border-slate-700/80 text-xs text-brand-300 backdrop-blur-md shadow-sm">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span>Available for Internships & Projects</span>
+            <span class="text-slate-500">•</span>
+            <span class="text-slate-400 font-normal">JECRC University</span>
+          </div>
+
+          <!-- Name & Role -->
+          <div class="space-y-2">
+            <p class="text-slate-400 text-sm sm:text-base font-medium tracking-wide uppercase">
+              Hello World, I'm
+            </p>
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-display font-extrabold tracking-tight text-white">
+              <span class="block">Hiteshi Bhardwaj</span>
+              <span class="block mt-1 text-2xl sm:text-3xl lg:text-4xl font-semibold gradient-text">
+                B.Tech Student | AI and Technology Enthusiast
+              </span>
+            </h1>
+          </div>
+
+          <!-- Introduction -->
+          <p class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0 font-normal">
+            I am a B.Tech student interested in technology, AI, web development and digital productivity. I am learning modern technologies and building practical projects.
+          </p>
+
+          <!-- Buttons -->
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
+            <a href="#projects" class="px-6 py-3.5 rounded-xl bg-gradient-to-r from-brand-600 via-blue-600 to-indigo-600 hover:from-brand-500 hover:to-indigo-500 text-white font-semibold text-sm sm:text-base shadow-lg shadow-brand-500/25 transition-all transform hover:-translate-y-0.5 flex items-center gap-2">
+              <span>View Projects</span>
+              <i data-lucide="layers" class="w-4 h-4"></i>
+            </a>
+
+            <a href="#contact" class="px-6 py-3.5 rounded-xl bg-slate-900/80 hover:bg-slate-800 text-slate-200 border border-slate-700 hover:border-slate-500 font-semibold text-sm sm:text-base transition-all transform hover:-translate-y-0.5">
+              Get In Touch
+            </a>
+
+            <a href="#skills" class="px-4 py-3.5 rounded-xl text-slate-400 hover:text-white text-sm font-medium transition-colors flex items-center gap-1.5">
+              <span>Explore Skills</span>
+              <i data-lucide="arrow-down" class="w-4 h-4 animate-bounce"></i>
+            </a>
+          </div>
+
+          <!-- Quick Stats -->
+          <div class="pt-6 grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-xl mx-auto lg:mx-0 border-t border-slate-800/80">
+            <div class="bg-slate-900/40 border border-slate-800/60 rounded-xl p-3 text-center lg:text-left">
+              <div class="text-lg sm:text-xl font-bold font-display text-white">B.Tech</div>
+              <div class="text-xs text-slate-400">Computer Science</div>
+            </div>
+            <div class="bg-slate-900/40 border border-slate-800/60 rounded-xl p-3 text-center lg:text-left">
+              <div class="text-lg sm:text-xl font-bold font-display text-white">8+ Skills</div>
+              <div class="text-xs text-slate-400">Core Toolkit</div>
+            </div>
+            <div class="bg-slate-900/40 border border-slate-800/60 rounded-xl p-3 text-center lg:text-left">
+              <div class="text-lg sm:text-xl font-bold font-display text-white">3+ Builds</div>
+              <div class="text-xs text-slate-400">Key Projects</div>
+            </div>
+            <div class="bg-slate-900/40 border border-slate-800/60 rounded-xl p-3 text-center lg:text-left">
+              <div class="text-lg sm:text-xl font-bold font-display text-white">JECRC</div>
+              <div class="text-xs text-slate-400">Jaipur, India</div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right: Modern Glassmorphic Card -->
+        <div class="lg:col-span-5 flex justify-center">
+          <div class="relative w-full max-w-md">
+            <div class="absolute -inset-1.5 bg-gradient-to-r from-brand-500 via-purple-500 to-cyan-500 rounded-3xl blur-xl opacity-30"></div>
+            
+            <div class="relative glass-card rounded-2xl p-6 sm:p-7 shadow-2xl border border-slate-700/60">
+              
+              <div class="flex items-center justify-between pb-5 border-b border-slate-800/80">
+                <div class="flex items-center gap-3">
+                  <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-brand-500 to-purple-600 flex items-center justify-center text-white font-display font-bold text-xl shadow-md">
+                    HB
+                  </div>
+                  <div>
+                    <h3 class="text-base font-bold text-white flex items-center gap-1.5">
+                      Hiteshi Bhardwaj
+                      <i data-lucide="sparkles" class="w-4 h-4 text-amber-400"></i>
+                    </h3>
+                    <p class="text-xs text-slate-400 font-medium">JECRC University</p>
+                  </div>
+                </div>
+                <span class="px-2.5 py-1 rounded-full text-[11px] font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">
+                  Student & Builder
+                </span>
+              </div>
+
+              <div class="py-5 space-y-3">
+                <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider">
+                  Core Focus & Interests
+                </div>
+
+                <div class="flex items-center justify-between p-3 rounded-xl bg-slate-900/60 border border-slate-800/80">
+                  <div class="flex items-center gap-2.5">
+                    <div class="p-2 rounded-lg bg-purple-500/10 text-purple-400">
+                      <i data-lucide="brain" class="w-4 h-4"></i>
+                    </div>
+                    <div>
+                      <div class="text-sm font-semibold text-white">AI & Generative AI</div>
+                      <div class="text-[11px] text-slate-400">LLM Apps, Prompting & Automation</div>
+                    </div>
+                  </div>
+                  <span class="text-xs font-mono text-purple-300 bg-purple-500/10 px-2 py-0.5 rounded">Active</span>
+                </div>
+
+                <div class="flex items-center justify-between p-3 rounded-xl bg-slate-900/60 border border-slate-800/80">
+                  <div class="flex items-center gap-2.5">
+                    <div class="p-2 rounded-lg bg-cyan-500/10 text-cyan-400">
+                      <i data-lucide="code" class="w-4 h-4"></i>
+                    </div>
+                    <div>
+                      <div class="text-sm font-semibold text-white">Web Development</div>
+                      <div class="text-[11px] text-slate-400">React, Tailwind CSS, JavaScript</div>
+                    </div>
+                  </div>
+                  <span class="text-xs font-mono text-cyan-300 bg-cyan-500/10 px-2 py-0.5 rounded">Active</span>
+                </div>
+
+                <div class="flex items-center justify-between p-3 rounded-xl bg-slate-900/60 border border-slate-800/80">
+                  <div class="flex items-center gap-2.5">
+                    <div class="p-2 rounded-lg bg-emerald-500/10 text-emerald-400">
+                      <i data-lucide="zap" class="w-4 h-4"></i>
+                    </div>
+                    <div>
+                      <div class="text-sm font-semibold text-white">Digital Productivity</div>
+                      <div class="text-[11px] text-slate-400">Knowledge systems & optimized workflows</div>
+                    </div>
+                  </div>
+                  <span class="text-xs font-mono text-emerald-300 bg-emerald-500/10 px-2 py-0.5 rounded">Active</span>
+                </div>
+              </div>
+
+              <div class="p-3 rounded-xl bg-slate-950/80 border border-slate-800 font-mono text-[11px] text-slate-400 flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                  <i data-lucide="terminal" class="w-3.5 h-3.5 text-brand-400"></i>
+                  <span>hiteshi@jecrc:~$ ready --build</span>
+                </div>
+                <span class="text-emerald-400 font-bold">200 OK</span>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. ABOUT ME SECTION -->
+  <section id="about" class="py-24 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-300 text-xs font-semibold uppercase tracking-wider">
+          <i data-lucide="book-open" class="w-3.5 h-3.5"></i>
+          <span>About Me</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-white tracking-tight">
+          Engineering Knowledge with a <span class="gradient-text">Practical Mindset</span>
+        </h2>
+        <p class="text-slate-400 text-base sm:text-lg">
+          Bridging academic fundamentals with modern technologies, hands-on experimentation, and digital productivity.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <div class="lg:col-span-7 space-y-6">
+          <div class="glass-card rounded-2xl p-6 sm:p-8 space-y-5 border border-slate-800">
+            <h3 class="text-xl sm:text-2xl font-bold font-display text-white">
+              Transforming Curiosity into Code and Practical AI Solutions
+            </h3>
+            
+            <div class="space-y-4 text-slate-300 leading-relaxed text-sm sm:text-base">
+              <p>
+                Hello! I am <strong class="text-white">Hiteshi Bhardwaj</strong>, a passionate B.Tech student at <strong class="text-brand-300">JECRC University</strong>. I am deeply captivated by the fast-evolving realms of Artificial Intelligence, Generative AI, modern Web Development, and Digital Productivity systems.
+              </p>
+              <p>
+                As an engineering student, my philosophy revolves around hands-on experimentation: I don't just study theoretical concepts, I transform them into practical, functional applications. From building responsive web apps to experimenting with modern generative models and productivity frameworks, I constantly push myself to learn cutting-edge tools.
+              </p>
+              <p class="text-slate-400">
+                Whether crafting a sleek frontend interface, exploring generative AI workflows, or systematizing my study habits with modern productivity tools, my focus is always on continuous self-improvement and delivering functional, high-quality outcomes.
+              </p>
+            </div>
+
+            <div class="pt-4 border-t border-slate-800/80 grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <div class="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
+                <div class="text-xs text-slate-400 font-medium">Program</div>
+                <div class="text-sm font-bold text-brand-400 mt-0.5">B.Tech</div>
+                <div class="text-[11px] text-slate-400">Computer Science Focus</div>
+              </div>
+
+              <div class="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
+                <div class="text-xs text-slate-400 font-medium">University</div>
+                <div class="text-sm font-bold text-purple-400 mt-0.5">JECRC University</div>
+                <div class="text-[11px] text-slate-400">Jaipur, Rajasthan</div>
+              </div>
+
+              <div class="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
+                <div class="text-xs text-slate-400 font-medium">Current Status</div>
+                <div class="text-sm font-bold text-emerald-400 mt-0.5">Pursuing B.Tech</div>
+                <div class="text-[11px] text-slate-400">Active Learner</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4">
+          <div class="glass-card glass-card-hover rounded-2xl p-5 border border-slate-800/80 group">
+            <div class="flex items-start gap-4">
+              <div class="w-11 h-11 rounded-xl bg-slate-800 border border-slate-700/80 flex items-center justify-center text-brand-400 group-hover:scale-110 group-hover:bg-brand-500/10 transition-all shrink-0">
+                <i data-lucide="graduation-cap" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="text-base font-bold text-white group-hover:text-brand-300 transition-colors">B.Tech Undergraduate</h4>
+                <div class="text-xs font-semibold text-brand-400/90">JECRC University</div>
+                <p class="text-xs text-slate-400 leading-relaxed pt-1">
+                  Pursuing rigorous engineering coursework with a strong foundation in computer science and algorithmic thinking.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="glass-card glass-card-hover rounded-2xl p-5 border border-slate-800/80 group">
+            <div class="flex items-start gap-4">
+              <div class="w-11 h-11 rounded-xl bg-slate-800 border border-slate-700/80 flex items-center justify-center text-brand-400 group-hover:scale-110 group-hover:bg-brand-500/10 transition-all shrink-0">
+                <i data-lucide="brain" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="text-base font-bold text-white group-hover:text-brand-300 transition-colors">AI & Innovation Mindset</h4>
+                <div class="text-xs font-semibold text-brand-400/90">Exploring Intelligent Systems</div>
+                <p class="text-xs text-slate-400 leading-relaxed pt-1">
+                  Passionate about generative AI models, prompt engineering, and integrating AI capabilities into everyday web tools.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="glass-card glass-card-hover rounded-2xl p-5 border border-slate-800/80 group">
+            <div class="flex items-start gap-4">
+              <div class="w-11 h-11 rounded-xl bg-slate-800 border border-slate-700/80 flex items-center justify-center text-brand-400 group-hover:scale-110 group-hover:bg-brand-500/10 transition-all shrink-0">
+                <i data-lucide="code-2" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="text-base font-bold text-white group-hover:text-brand-300 transition-colors">Modern Web Craftsman</h4>
+                <div class="text-xs font-semibold text-brand-400/90">Clean, Accessible Code</div>
+                <p class="text-xs text-slate-400 leading-relaxed pt-1">
+                  Creating fast, fluid, and mobile-first user interfaces using React, JavaScript, and Tailwind CSS.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="glass-card glass-card-hover rounded-2xl p-5 border border-slate-800/80 group">
+            <div class="flex items-start gap-4">
+              <div class="w-11 h-11 rounded-xl bg-slate-800 border border-slate-700/80 flex items-center justify-center text-brand-400 group-hover:scale-110 group-hover:bg-brand-500/10 transition-all shrink-0">
+                <i data-lucide="zap" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="text-base font-bold text-white group-hover:text-brand-300 transition-colors">Productivity Enthusiast</h4>
+                <div class="text-xs font-semibold text-brand-400/90">Effective Digital Systems</div>
+                <p class="text-xs text-slate-400 leading-relaxed pt-1">
+                  Mastering time-blocking, knowledge management tools, and automated workflows to optimize output.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. EDUCATION SECTION -->
+  <section id="education" class="py-24 relative bg-slate-950/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-xs font-semibold uppercase tracking-wider">
+          <i data-lucide="school" class="w-3.5 h-3.5"></i>
+          <span>Academic Background</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-white tracking-tight">
+          Education & <span class="gradient-text">Foundational Learning</span>
+        </h2>
+        <p class="text-slate-400 text-base sm:text-lg">
+          Building rigorous theoretical and practical foundations in technology and computer science.
+        </p>
+      </div>
+
+      <div class="max-w-4xl mx-auto">
+        <div class="glass-card rounded-2xl p-6 sm:p-9 border border-slate-800 shadow-xl relative overflow-hidden group">
+          
+          <div class="absolute top-0 right-0 bg-gradient-to-l from-brand-600/20 to-transparent px-6 py-2 text-xs font-semibold text-brand-300 border-b border-l border-brand-500/20 rounded-bl-xl">
+            Currently Pursuing
+          </div>
+
+          <div class="flex flex-col md:flex-row gap-6 items-start">
+            <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-brand-600 to-indigo-600 p-0.5 shrink-0 shadow-lg shadow-brand-600/20">
+              <div class="w-full h-full bg-[#0a0d14] rounded-[14px] flex items-center justify-center text-brand-400">
+                <i data-lucide="graduation-cap" class="w-8 h-8"></i>
+              </div>
+            </div>
+
+            <div class="space-y-4 flex-1">
+              <div>
+                <h3 class="text-2xl sm:text-3xl font-display font-bold text-white">
+                  JECRC University
+                </h3>
+
+                <p class="text-brand-400 font-semibold text-lg mt-1">
+                  Bachelor of Technology (B.Tech) — <span class="text-slate-300 font-medium">Computer Science & Engineering</span>
+                </p>
+
+                <div class="flex flex-wrap items-center gap-4 text-xs sm:text-sm text-slate-400 mt-2">
+                  <span class="flex items-center gap-1.5">
+                    <i data-lucide="calendar" class="w-4 h-4 text-indigo-400"></i>
+                    Undergraduate Degree
+                  </span>
+                  <span>•</span>
+                  <span class="flex items-center gap-1.5">
+                    <i data-lucide="map-pin" class="w-4 h-4 text-rose-400"></i>
+                    Jaipur, Rajasthan
+                  </span>
+                </div>
+              </div>
+
+              <p class="text-slate-300 text-sm sm:text-base leading-relaxed pt-1">
+                Engaging in comprehensive computer science curriculum, developing practical technical competencies, participating in technical symposiums, and collaborating on student-led software initiatives.
+              </p>
+
+              <div class="pt-4 border-t border-slate-800/80">
+                <h4 class="text-xs uppercase tracking-wider font-semibold text-slate-400 mb-3 flex items-center gap-1.5">
+                  <i data-lucide="book-open" class="w-3.5 h-3.5 text-brand-400"></i>
+                  Key Subjects & Academic Coursework
+                </h4>
+                <div class="flex flex-wrap gap-2">
+                  <span class="px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-900 text-slate-300 border border-slate-800">Data Structures & Algorithms</span>
+                  <span class="px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-900 text-slate-300 border border-slate-800">Artificial Intelligence</span>
+                  <span class="px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-900 text-slate-300 border border-slate-800">Web Technologies</span>
+                  <span class="px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-900 text-slate-300 border border-slate-800">Database Management Systems</span>
+                  <span class="px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-900 text-slate-300 border border-slate-800">Object-Oriented Programming (OOP)</span>
+                  <span class="px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-900 text-slate-300 border border-slate-800">Software Engineering</span>
+                </div>
+              </div>
+
+              <div class="pt-4 border-t border-slate-800/80">
+                <h4 class="text-xs uppercase tracking-wider font-semibold text-slate-400 mb-3 flex items-center gap-1.5">
+                  <i data-lucide="award" class="w-3.5 h-3.5 text-amber-400"></i>
+                  Academic Highlights & Activities
+                </h4>
+                <ul class="space-y-2">
+                  <li class="flex items-start gap-2.5 text-xs sm:text-sm text-slate-300">
+                    <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
+                    <span>Consistent academic performance in core technical disciplines</span>
+                  </li>
+                  <li class="flex items-start gap-2.5 text-xs sm:text-sm text-slate-300">
+                    <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
+                    <span>Active participant in university developer circles and tech clubs</span>
+                  </li>
+                  <li class="flex items-start gap-2.5 text-xs sm:text-sm text-slate-300">
+                    <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
+                    <span>Hands-on lab work across data structures, algorithm design, and full-stack web development</span>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. SKILLS SECTION -->
+  <section id="skills" class="py-24 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-14 space-y-3">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-300 text-xs font-semibold uppercase tracking-wider">
+          <i data-lucide="flame" class="w-3.5 h-3.5"></i>
+          <span>Technical Capabilities</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-white tracking-tight">
+          My Skills & <span className="gradient-text">Core Competencies</span>
+        </h2>
+        <p class="text-slate-400 text-base sm:text-lg">
+          Attractive skill cards for all 8 requested core technology and productivity domains.
+        </p>
+      </div>
+
+      <!-- Skills Cards Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- 1. HTML -->
+        <div class="glass-card glass-card-hover rounded-2xl p-6 border border-slate-800 flex flex-col justify-between group">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-12 h-12 rounded-xl bg-slate-800/80 border border-slate-700 flex items-center justify-center text-orange-400 group-hover:scale-110 transition-all">
+                <i data-lucide="file-code" class="w-6 h-6"></i>
+              </div>
+              <span class="text-[11px] font-semibold px-2.5 py-1 rounded-full border bg-orange-500/10 text-orange-400 border-orange-500/30">
+                Advanced
+              </span>
+            </div>
+            <h3 class="text-lg font-bold font-display text-white group-hover:text-orange-400 transition-colors">HTML</h3>
+            <div class="text-xs text-slate-400 font-medium mb-3">Frontend Architecture</div>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Semantic markup, modern HTML5 APIs, accessibility (a11y), and SEO-optimized structures.
+            </p>
+          </div>
+          <div class="pt-5 mt-4 border-t border-slate-800/80">
+            <div class="flex items-center justify-between text-[11px] text-slate-400 mb-1.5 font-mono">
+              <span>Proficiency</span>
+              <span class="text-white font-semibold">95%</span>
+            </div>
+            <div class="w-full h-1.5 bg-slate-800 rounded-full overflow-hidden">
+              <div class="h-full bg-gradient-to-r from-orange-500 to-amber-500 rounded-full" style="width: 95%"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. CSS -->
+        <div class="glass-card glass-card-hover rounded-2xl p-6 border border-slate-800 flex flex-col justify-between group">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-12 h-12 rounded-xl bg-slate-800/80 border border-slate-700 flex items-center justify-center text-blue-400 group-hover:scale-110 transition-all">
+                <i data-lucide="palette" class="w-6 h-6"></i>
+              </div>
+              <span class="text-[11px] font-semibold px-2.5 py-1 rounded-full border bg-blue-500/10 text-blue-400 border-blue-500/30">
+                Advanced
+              </span>
+            </div>
+            <h3 class="text-lg font-bold font-display text-white group-hover:text-blue-400 transition-colors">CSS</h3>
+            <div class="text-xs text-slate-400 font-medium mb-3">Styling & Design</div>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Modern CSS3, Flexbox, CSS Grid, custom animations, responsive layouts, and Tailwind CSS framework.
+            </p>
+          </div>
+          <div class="pt-5 mt-4 border-t border-slate-800/80">
+            <div class="flex items-center justify-between text-[11px] text-slate-400 mb-1.5 font-mono">
+              <span>Proficiency</span>
+              <span class="text-white font-semibold">90%</span>
+            </div>
+            <div class="w-full h-1.5 bg-slate-800 rounded-full overflow-hidden">
+              <div class="h-full bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full" style="width: 90%"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Javascript -->
+        <div class="glass-card glass-card-hover rounded-2xl p-6 border border-slate-800 flex flex-col justify-between group">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-12 h-12 rounded-xl bg-slate-800/80 border border-slate-700 flex items-center justify-center text-yellow-400 group-hover:scale-110 transition-all">
+                <i data-lucide="code" class="w-6 h-6"></i>
+              </div>
+              <span class="text-[11px] font-semibold px-2.5 py-1 rounded-full border bg-yellow-500/10 text-yellow-400 border-yellow-500/30">
+                Proficient
+              </span>
+            </div>
+            <h3 class="text-lg font-bold font-display text-white group-hover:text-yellow-400 transition-colors">Javascript</h3>
+            <div class="text-xs text-slate-400 font-medium mb-3">Core Programming</div>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Modern ES6+ syntax, asynchronous programming (Promises, async/await), DOM manipulation, and modular architecture.
+            </p>
+          </div>
+          <div class="pt-5 mt-4 border-t border-slate-800/80">
+            <div class="flex items-center justify-between text-[11px] text-slate-400 mb-1.5 font-mono">
+              <span>Proficiency</span>
+              <span class="text-white font-semibold">85%</span>
+            </div>
+            <div class="w-full h-1.5 bg-slate-800 rounded-full overflow-hidden">
+              <div class="h-full bg-gradient-to-r from-yellow-500 to-amber-500 rounded-full" style="width: 85%"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Python -->
+        <div class="glass-card glass-card-hover rounded-2xl p-6 border border-slate-800 flex flex-col justify-between group">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-12 h-12 rounded-xl bg-slate-800/80 border border-slate-700 flex items-center justify-center text-emerald-400 group-hover:scale-110 transition-all">
+                <i data-lucide="terminal" class="w-6 h-6"></i>
+              </div>
+              <span class="text-[11px] font-semibold px-2.5 py-1 rounded-full border bg-emerald-500/10 text-emerald-400 border-emerald-500/30">
+                Proficient
+              </span>
+            </div>
+            <h3 class="text-lg font-bold font-display text-white group-hover:text-emerald-400 transition-colors">Python</h3>
+            <div class="text-xs text-slate-400 font-medium mb-3">Programming & Logic</div>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Object-oriented programming, data structures, scripting, algorithm design, and AI/ML libraries.
+            </p>
+          </div>
+          <div class="pt-5 mt-4 border-t border-slate-800/80">
+            <div class="flex items-center justify-between text-[11px] text-slate-400 mb-1.5 font-mono">
+              <span>Proficiency</span>
+              <span class="text-white font-semibold">82%</span>
+            </div>
+            <div class="w-full h-1.5 bg-slate-800 rounded-full overflow-hidden">
+              <div class="h-full bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full" style="width: 82%"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Artificial Intelligence -->
+        <div class="glass-card glass-card-hover rounded-2xl p-6 border border-slate-800 flex flex-col justify-between group">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-12 h-12 rounded-xl bg-slate-800/80 border border-slate-700 flex items-center justify-center text-purple-400 group-hover:scale-110 transition-all">
+                <i data-lucide="cpu" class="w-6 h-6"></i>
+              </div>
+              <span class="text-[11px] font-semibold px-2.5 py-1 rounded-full border bg-purple-500/10 text-purple-400 border-purple-500/30">
+                Intermediate
+              </span>
+            </div>
+            <h3 class="text-lg font-bold font-display text-white group-hover:text-purple-400 transition-colors">Artificial Intelligence</h3>
+            <div class="text-xs text-slate-400 font-medium mb-3">Intelligent Systems</div>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Core AI concepts, machine learning fundamentals, data preprocessing, model evaluation, and intelligent systems.
+            </p>
+          </div>
+          <div class="pt-5 mt-4 border-t border-slate-800/80">
+            <div class="flex items-center justify-between text-[11px] text-slate-400 mb-1.5 font-mono">
+              <span>Proficiency</span>
+              <span class="text-white font-semibold">78%</span>
+            </div>
+            <div class="w-full h-1.5 bg-slate-800 rounded-full overflow-hidden">
+              <div class="h-full bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full" style="width: 78%"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. Generative AI -->
+        <div class="glass-card glass-card-hover rounded-2xl p-6 border border-slate-800 flex flex-col justify-between group">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-12 h-12 rounded-xl bg-slate-800/80 border border-slate-700 flex items-center justify-center text-pink-400 group-hover:scale-110 transition-all">
+                <i data-lucide="sparkles" class="w-6 h-6"></i>
+              </div>
+              <span class="text-[11px] font-semibold px-2.5 py-1 rounded-full border bg-pink-500/10 text-pink-400 border-pink-500/30">
+                Enthusiast
+              </span>
+            </div>
+            <h3 class="text-lg font-bold font-display text-white group-hover:text-pink-400 transition-colors">Generative AI</h3>
+            <div class="text-xs text-slate-400 font-medium mb-3">Modern AI Models</div>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Prompt engineering, Large Language Model (LLM) workflows, AI API integration, and AI-assisted coding paradigms.
+            </p>
+          </div>
+          <div class="pt-5 mt-4 border-t border-slate-800/80">
+            <div class="flex items-center justify-between text-[11px] text-slate-400 mb-1.5 font-mono">
+              <span>Proficiency</span>
+              <span class="text-white font-semibold">80%</span>
+            </div>
+            <div class="w-full h-1.5 bg-slate-800 rounded-full overflow-hidden">
+              <div class="h-full bg-gradient-to-r from-pink-500 to-rose-500 rounded-full" style="width: 80%"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7. Web Development -->
+        <div class="glass-card glass-card-hover rounded-2xl p-6 border border-slate-800 flex flex-col justify-between group">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-12 h-12 rounded-xl bg-slate-800/80 border border-slate-700 flex items-center justify-center text-cyan-400 group-hover:scale-110 transition-all">
+                <i data-lucide="globe" class="w-6 h-6"></i>
+              </div>
+              <span class="text-[11px] font-semibold px-2.5 py-1 rounded-full border bg-cyan-500/10 text-cyan-400 border-cyan-500/30">
+                Advanced
+              </span>
+            </div>
+            <h3 class="text-lg font-bold font-display text-white group-hover:text-cyan-400 transition-colors">Web Development</h3>
+            <div class="text-xs text-slate-400 font-medium mb-3">Frontend & UI Systems</div>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              End-to-end frontend development with React, component-driven UI, responsive design, and deployment pipelines.
+            </p>
+          </div>
+          <div class="pt-5 mt-4 border-t border-slate-800/80">
+            <div class="flex items-center justify-between text-[11px] text-slate-400 mb-1.5 font-mono">
+              <span>Proficiency</span>
+              <span class="text-white font-semibold">88%</span>
+            </div>
+            <div class="w-full h-1.5 bg-slate-800 rounded-full overflow-hidden">
+              <div class="h-full bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full" style="width: 88%"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 8. Digital Productivity -->
+        <div class="glass-card glass-card-hover rounded-2xl p-6 border border-slate-800 flex flex-col justify-between group">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-12 h-12 rounded-xl bg-slate-800/80 border border-slate-700 flex items-center justify-center text-teal-400 group-hover:scale-110 transition-all">
+                <i data-lucide="check-circle-2" class="w-6 h-6"></i>
+              </div>
+              <span class="text-[11px] font-semibold px-2.5 py-1 rounded-full border bg-teal-500/10 text-teal-400 border-teal-500/30">
+                Advanced
+              </span>
+            </div>
+            <h3 class="text-lg font-bold font-display text-white group-hover:text-teal-400 transition-colors">Digital Productivity</h3>
+            <div class="text-xs text-slate-400 font-medium mb-3">Workflows & Systems</div>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Advanced Notion systems, Obsidian knowledge graphs, time-blocking techniques, Git version control, and workflow automation.
+            </p>
+          </div>
+          <div class="pt-5 mt-4 border-t border-slate-800/80">
+            <div class="flex items-center justify-between text-[11px] text-slate-400 mb-1.5 font-mono">
+              <span>Proficiency</span>
+              <span class="text-white font-semibold">92%</span>
+            </div>
+            <div class="w-full h-1.5 bg-slate-800 rounded-full overflow-hidden">
+              <div class="h-full bg-gradient-to-r from-teal-500 to-emerald-500 rounded-full" style="width: 92%"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 5. PROJECTS SECTION -->
+  <section id="projects" class="py-24 relative bg-slate-950/30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-300 text-xs font-semibold uppercase tracking-wider">
+          <i data-lucide="layers" class="w-3.5 h-3.5"></i>
+          <span>Featured Work</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-white tracking-tight">
+          Projects & <span class="gradient-text">Practical Creations</span>
+        </h2>
+        <p class="text-slate-400 text-base sm:text-lg">
+          Practical applications built with modern frontend tools, generative AI models, and student productivity workflows.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Project 1: Personal Portfolio Website -->
+        <div class="glass-card glass-card-hover rounded-2xl border border-slate-800/80 overflow-hidden flex flex-col justify-between group">
+          <div class="relative h-48 bg-gradient-to-br from-slate-900 to-slate-950 p-6 flex flex-col justify-between border-b border-slate-800/80">
+            <div class="flex items-center justify-between relative z-10">
+              <span class="text-[11px] font-semibold uppercase tracking-wider text-slate-300 bg-slate-900/80 px-3 py-1 rounded-full border border-slate-700/60">
+                Web Development
+              </span>
+              <div class="w-10 h-10 rounded-xl bg-slate-800/80 border border-slate-700 flex items-center justify-center text-cyan-400">
+                <i data-lucide="laptop" class="w-5 h-5"></i>
+              </div>
+            </div>
+            <div class="relative z-10">
+              <div class="text-xs font-mono text-cyan-400 mb-1 flex items-center gap-1.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>
+                Featured Build
+              </div>
+              <h3 class="text-xl font-bold font-display text-white group-hover:text-cyan-300 transition-colors">
+                Personal Portfolio Website
+              </h3>
+            </div>
+          </div>
+
+          <div class="p-6 flex-1 flex flex-col justify-between space-y-5">
+            <div>
+              <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                A modern, ultra-responsive personal developer portfolio showcasing academic journey, technical skills, and projects with dynamic glassmorphism aesthetics.
+              </p>
+              <div>
+                <div class="text-[11px] font-semibold text-slate-400 uppercase tracking-wider mb-2">Technologies</div>
+                <div class="flex flex-wrap gap-1.5">
+                  <span class="px-2.5 py-1 rounded-md text-xs font-medium bg-slate-900 text-slate-300 border border-slate-800">React</span>
+                  <span class="px-2.5 py-1 rounded-md text-xs font-medium bg-slate-900 text-slate-300 border border-slate-800">Vite</span>
+                  <span class="px-2.5 py-1 rounded-md text-xs font-medium bg-slate-900 text-slate-300 border border-slate-800">Tailwind CSS</span>
+                  <span class="px-2.5 py-1 rounded-md text-xs font-medium bg-slate-900 text-slate-300 border border-slate-800">JavaScript</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between gap-3">
+              <button onclick="openModal('portfolio')" class="flex-1 py-2.5 px-4 rounded-xl bg-gradient-to-r from-brand-600 to-indigo-600 hover:from-brand-500 hover:to-indigo-500 text-white font-semibold text-xs sm:text-sm shadow-md transition-all flex items-center justify-center gap-2">
+                <span>View Project</span>
+                <i data-lucide="eye" class="w-4 h-4"></i>
+              </button>
+              <a href="https://github.com/hiteshibhardwaj" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700/80 text-slate-300 hover:text-white transition-colors" title="View GitHub Repository">
+                <i data-lucide="github" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: AI Website Project -->
+        <div class="glass-card glass-card-hover rounded-2xl border border-slate-800/80 overflow-hidden flex flex-col justify-between group">
+          <div class="relative h-48 bg-gradient-to-br from-slate-900 to-slate-950 p-6 flex flex-col justify-between border-b border-slate-800/80">
+            <div class="flex items-center justify-between relative z-10">
+              <span class="text-[11px] font-semibold uppercase tracking-wider text-slate-300 bg-slate-900/80 px-3 py-1 rounded-full border border-slate-700/60">
+                Artificial Intelligence
+              </span>
+              <div class="w-10 h-10 rounded-xl bg-slate-800/80 border border-slate-700 flex items-center justify-center text-purple-400">
+                <i data-lucide="bot" class="w-5 h-5"></i>
+              </div>
+            </div>
+            <div class="relative z-10">
+              <div class="text-xs font-mono text-purple-400 mb-1 flex items-center gap-1.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span>
+                Featured Build
+              </div>
+              <h3 class="text-xl font-bold font-display text-white group-hover:text-purple-300 transition-colors">
+                AI Website Project
+              </h3>
+            </div>
+          </div>
+
+          <div class="p-6 flex-1 flex flex-col justify-between space-y-5">
+            <div>
+              <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                An intelligent web application leveraging Generative AI to provide smart content assistance, text summarization, and interactive prompt exploration.
+              </p>
+              <div>
+                <div class="text-[11px] font-semibold text-slate-400 uppercase tracking-wider mb-2">Technologies</div>
+                <div class="flex flex-wrap gap-1.5">
+                  <span class="px-2.5 py-1 rounded-md text-xs font-medium bg-slate-900 text-slate-300 border border-slate-800">Generative AI</span>
+                  <span class="px-2.5 py-1 rounded-md text-xs font-medium bg-slate-900 text-slate-300 border border-slate-800">React</span>
+                  <span class="px-2.5 py-1 rounded-md text-xs font-medium bg-slate-900 text-slate-300 border border-slate-800">Python</span>
+                  <span class="px-2.5 py-1 rounded-md text-xs font-medium bg-slate-900 text-slate-300 border border-slate-800">API Integration</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between gap-3">
+              <button onclick="openModal('ai')" class="flex-1 py-2.5 px-4 rounded-xl bg-gradient-to-r from-brand-600 to-indigo-600 hover:from-brand-500 hover:to-indigo-500 text-white font-semibold text-xs sm:text-sm shadow-md transition-all flex items-center justify-center gap-2">
+                <span>View Project</span>
+                <i data-lucide="eye" class="w-4 h-4"></i>
+              </button>
+              <a href="https://github.com/hiteshibhardwaj" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700/80 text-slate-300 hover:text-white transition-colors" title="View GitHub Repository">
+                <i data-lucide="github" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: Student Productivity Project -->
+        <div class="glass-card glass-card-hover rounded-2xl border border-slate-800/80 overflow-hidden flex flex-col justify-between group">
+          <div class="relative h-48 bg-gradient-to-br from-slate-900 to-slate-950 p-6 flex flex-col justify-between border-b border-slate-800/80">
+            <div class="flex items-center justify-between relative z-10">
+              <span class="text-[11px] font-semibold uppercase tracking-wider text-slate-300 bg-slate-900/80 px-3 py-1 rounded-full border border-slate-700/60">
+                Digital Productivity
+              </span>
+              <div class="w-10 h-10 rounded-xl bg-slate-800/80 border border-slate-700 flex items-center justify-center text-emerald-400">
+                <i data-lucide="check-square" class="w-5 h-5"></i>
+              </div>
+            </div>
+            <div class="relative z-10">
+              <div class="text-xs font-mono text-emerald-400 mb-1 flex items-center gap-1.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                Featured Build
+              </div>
+              <h3 class="text-xl font-bold font-display text-white group-hover:text-emerald-300 transition-colors">
+                Student Productivity Project
+              </h3>
+            </div>
+          </div>
+
+          <div class="p-6 flex-1 flex flex-col justify-between space-y-5">
+            <div>
+              <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                A digital workspace engineered for college students, incorporating Pomodoro focus sessions, time-blocking, task prioritization, and study tracking.
+              </p>
+              <div>
+                <div class="text-[11px] font-semibold text-slate-400 uppercase tracking-wider mb-2">Technologies</div>
+                <div class="flex flex-wrap gap-1.5">
+                  <span class="px-2.5 py-1 rounded-md text-xs font-medium bg-slate-900 text-slate-300 border border-slate-800">JavaScript</span>
+                  <span class="px-2.5 py-1 rounded-md text-xs font-medium bg-slate-900 text-slate-300 border border-slate-800">Digital Productivity</span>
+                  <span class="px-2.5 py-1 rounded-md text-xs font-medium bg-slate-900 text-slate-300 border border-slate-800">Local Storage</span>
+                  <span class="px-2.5 py-1 rounded-md text-xs font-medium bg-slate-900 text-slate-300 border border-slate-800">Tailwind CSS</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between gap-3">
+              <button onclick="openModal('productivity')" class="flex-1 py-2.5 px-4 rounded-xl bg-gradient-to-r from-brand-600 to-indigo-600 hover:from-brand-500 hover:to-indigo-500 text-white font-semibold text-xs sm:text-sm shadow-md transition-all flex items-center justify-center gap-2">
+                <span>View Project</span>
+                <i data-lucide="eye" class="w-4 h-4"></i>
+              </button>
+              <a href="https://github.com/hiteshibhardwaj" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700/80 text-slate-300 hover:text-white transition-colors" title="View GitHub Repository">
+                <i data-lucide="github" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 6. ACHIEVEMENTS SECTION -->
+  <section id="achievements" class="py-24 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-14 space-y-3">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-300 text-xs font-semibold uppercase tracking-wider">
+          <i data-lucide="trophy" class="w-3.5 h-3.5"></i>
+          <span>Honors & Growth</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-white tracking-tight">
+          Achievements & <span class="gradient-text">Milestones</span>
+        </h2>
+        <p class="text-slate-400 text-base sm:text-lg">
+          Extensible section showcasing certifications, hackathons, courses, awards, and other achievements.
+        </p>
+      </div>
+
+      <!-- Filter Buttons -->
+      <div class="flex flex-wrap items-center justify-center gap-2 mb-12" id="achievementFilters">
+        <button onclick="filterAchievements('all')" class="ach-tab-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-medium bg-gradient-to-r from-amber-600 to-orange-600 text-white shadow-md shadow-amber-500/20 scale-105" data-filter="all">All</button>
+        <button onclick="filterAchievements('certifications')" class="ach-tab-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-medium bg-slate-900/80 text-slate-400 hover:text-white hover:bg-slate-800 border border-slate-800" data-filter="certifications">Certifications</button>
+        <button onclick="filterAchievements('hackathons')" class="ach-tab-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-medium bg-slate-900/80 text-slate-400 hover:text-white hover:bg-slate-800 border border-slate-800" data-filter="hackathons">Hackathons</button>
+        <button onclick="filterAchievements('courses')" class="ach-tab-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-medium bg-slate-900/80 text-slate-400 hover:text-white hover:bg-slate-800 border border-slate-800" data-filter="courses">Courses</button>
+        <button onclick="filterAchievements('awards')" class="ach-tab-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-medium bg-slate-900/80 text-slate-400 hover:text-white hover:bg-slate-800 border border-slate-800" data-filter="awards">Awards</button>
+        <button onclick="filterAchievements('other')" class="ach-tab-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-medium bg-slate-900/80 text-slate-400 hover:text-white hover:bg-slate-800 border border-slate-800" data-filter="other">Other Achievements</button>
+      </div>
+
+      <!-- Achievements Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="achievementsGrid">
+        
+        <!-- Cert 1 -->
+        <div class="ach-card glass-card glass-card-hover rounded-2xl p-6 border border-slate-800 flex flex-col justify-between" data-category="certifications">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-[11px] font-semibold px-2.5 py-1 rounded-full border bg-blue-500/10 text-blue-400 border-blue-500/30">Certifications</span>
+              <span class="text-xs text-slate-400 font-medium">2024</span>
+            </div>
+            <h3 class="text-lg font-bold font-display text-white mb-1.5">Generative AI Foundations & Prompt Engineering</h3>
+            <div class="text-xs font-semibold text-brand-400 mb-3">Online Learning / Tech Platform</div>
+            <p class="text-xs text-slate-300 leading-relaxed">Completed comprehensive training on Large Language Models, prompt crafting strategies, and real-world AI applications.</p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-400 font-mono">
+            <span>Status: <strong class="text-white font-medium">Certified</strong></span>
+            <span class="text-brand-400">Verified ✓</span>
+          </div>
+        </div>
+
+        <!-- Cert 2 -->
+        <div class="ach-card glass-card glass-card-hover rounded-2xl p-6 border border-slate-800 flex flex-col justify-between" data-category="certifications">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-[11px] font-semibold px-2.5 py-1 rounded-full border bg-blue-500/10 text-blue-400 border-blue-500/30">Certifications</span>
+              <span class="text-xs text-slate-400 font-medium">2024</span>
+            </div>
+            <h3 class="text-lg font-bold font-display text-white mb-1.5">Python Programming & Problem Solving</h3>
+            <div class="text-xs font-semibold text-brand-400 mb-3">Technical Certification</div>
+            <p class="text-xs text-slate-300 leading-relaxed">Mastered Python core data structures, object-oriented concepts, and computational problem-solving techniques.</p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-400 font-mono">
+            <span>Status: <strong class="text-white font-medium">Completed</strong></span>
+            <span class="text-brand-400">Verified ✓</span>
+          </div>
+        </div>
+
+        <!-- Hackathon 1 -->
+        <div class="ach-card glass-card glass-card-hover rounded-2xl p-6 border border-slate-800 flex flex-col justify-between" data-category="hackathons">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-[11px] font-semibold px-2.5 py-1 rounded-full border bg-purple-500/10 text-purple-400 border-purple-500/30">Hackathons</span>
+              <span class="text-xs text-slate-400 font-medium">2024</span>
+            </div>
+            <h3 class="text-lg font-bold font-display text-white mb-1.5">University Tech Innovation Hackathon</h3>
+            <div class="text-xs font-semibold text-brand-400 mb-3">JECRC University & Tech Community</div>
+            <p class="text-xs text-slate-300 leading-relaxed">Collaborated in an intensive hackathon challenge to conceptualize and prototype tech solutions addressing campus student challenges.</p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-400 font-mono">
+            <span>Status: <strong class="text-white font-medium">Participant</strong></span>
+            <span class="text-brand-400">Verified ✓</span>
+          </div>
+        </div>
+
+        <!-- Course 1 -->
+        <div class="ach-card glass-card glass-card-hover rounded-2xl p-6 border border-slate-800 flex flex-col justify-between" data-category="courses">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-[11px] font-semibold px-2.5 py-1 rounded-full border bg-emerald-500/10 text-emerald-400 border-emerald-500/30">Courses</span>
+              <span class="text-xs text-slate-400 font-medium">2023 - 2024</span>
+            </div>
+            <h3 class="text-lg font-bold font-display text-white mb-1.5">Modern Full-Stack Web Development Mastery</h3>
+            <div class="text-xs font-semibold text-brand-400 mb-3">Online Academy</div>
+            <p class="text-xs text-slate-300 leading-relaxed">Deep dive into HTML5, CSS3, JavaScript ES6+, React, component lifecycles, and modern frontend development best practices.</p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-400 font-mono">
+            <span>Status: <strong class="text-white font-medium">Honors</strong></span>
+            <span class="text-brand-400">Verified ✓</span>
+          </div>
+        </div>
+
+        <!-- Award 1 -->
+        <div class="ach-card glass-card glass-card-hover rounded-2xl p-6 border border-slate-800 flex flex-col justify-between" data-category="awards">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-[11px] font-semibold px-2.5 py-1 rounded-full border bg-amber-500/10 text-amber-400 border-amber-500/30">Awards</span>
+              <span class="text-xs text-slate-400 font-medium">2023 - 2024</span>
+            </div>
+            <h3 class="text-lg font-bold font-display text-white mb-1.5">Academic Excellence & Active Learner Recognition</h3>
+            <div class="text-xs font-semibold text-brand-400 mb-3">JECRC University</div>
+            <p class="text-xs text-slate-300 leading-relaxed">Recognized for consistent coursework performance, active classroom engagement, and enthusiastic participation in tech labs.</p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-400 font-mono">
+            <span>Status: <strong class="text-white font-medium">Merit</strong></span>
+            <span class="text-brand-400">Verified ✓</span>
+          </div>
+        </div>
+
+        <!-- Other 1 -->
+        <div class="ach-card glass-card glass-card-hover rounded-2xl p-6 border border-slate-800 flex flex-col justify-between" data-category="other">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-[11px] font-semibold px-2.5 py-1 rounded-full border bg-cyan-500/10 text-cyan-400 border-cyan-500/30">Other Achievements</span>
+              <span class="text-xs text-slate-400 font-medium">2024</span>
+            </div>
+            <h3 class="text-lg font-bold font-display text-white mb-1.5">Digital Productivity & Knowledge Systems Workshop</h3>
+            <div class="text-xs font-semibold text-brand-400 mb-3">Student Tech Society</div>
+            <p class="text-xs text-slate-300 leading-relaxed">Organized and shared productivity strategies on digital note-taking and effective task management for peer engineering students.</p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-400 font-mono">
+            <span>Status: <strong class="text-white font-medium">Community</strong></span>
+            <span class="text-brand-400">Verified ✓</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 7. CONTACT SECTION -->
+  <section id="contact" class="py-24 relative bg-slate-950/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-300 text-xs font-semibold uppercase tracking-wider">
+          <i data-lucide="message-square" class="w-3.5 h-3.5"></i>
+          <span>Get In Touch</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-white tracking-tight">
+          Let's Connect & <span class="gradient-text">Collaborate</span>
+        </h2>
+        <p class="text-slate-400 text-base sm:text-lg">
+          Have a project in mind, an internship opportunity, or want to discuss AI and web technologies? Feel free to reach out!
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start max-w-6xl mx-auto">
+        
+        <!-- Left: Direct Links -->
+        <div class="lg:col-span-5 space-y-5">
+          <div class="glass-card rounded-2xl p-6 sm:p-7 border border-slate-800 space-y-6">
+            <div>
+              <h3 class="text-xl font-bold font-display text-white">Contact Information</h3>
+              <p class="text-xs text-slate-400 mt-1">
+                Reach out anytime. I am eager to connect on student initiatives, internships, and tech ventures!
+              </p>
+            </div>
+
+            <!-- Email -->
+            <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800 space-y-2">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2 text-xs font-semibold text-slate-400">
+                  <i data-lucide="mail" class="w-4 h-4 text-brand-400"></i>
+                  <span>Email Address</span>
+                </div>
+                <button onclick="copyEmailToClipboard()" id="copyBtn" class="inline-flex items-center gap-1 text-[11px] text-brand-400 hover:text-brand-300 bg-brand-500/10 px-2 py-0.5 rounded cursor-pointer transition-colors">
+                  <i data-lucide="copy" class="w-3 h-3"></i>
+                  <span id="copyText">Copy</span>
+                </button>
+              </div>
+              <a href="mailto:hiteshibhardwaj.work@gmail.com" class="block text-sm font-semibold text-white hover:text-brand-400 transition-colors break-all">
+                hiteshibhardwaj.work@gmail.com
+              </a>
+            </div>
+
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/hiteshi-bhardwaj" target="_blank" rel="noopener noreferrer" class="p-4 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-blue-500/40 transition-all flex items-center justify-between group block">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-lg bg-blue-600/10 text-blue-400 flex items-center justify-center">
+                  <i data-lucide="linkedin" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <div class="text-xs text-slate-400 font-medium">LinkedIn Profile</div>
+                  <div class="text-sm font-bold text-white group-hover:text-blue-400 transition-colors">
+                    Hiteshi Bhardwaj
+                  </div>
+                </div>
+              </div>
+              <i data-lucide="arrow-up-right" class="w-4 h-4 text-slate-500 group-hover:text-blue-400 transition-colors"></i>
+            </a>
+
+            <!-- GitHub -->
+            <a href="https://github.com/hiteshibhardwaj" target="_blank" rel="noopener noreferrer" class="p-4 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-slate-600 transition-all flex items-center justify-between group block">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-lg bg-slate-800 text-slate-300 flex items-center justify-center">
+                  <i data-lucide="github" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <div class="text-xs text-slate-400 font-medium">GitHub Repositories</div>
+                  <div class="text-sm font-bold text-white group-hover:text-brand-400 transition-colors">
+                    Hiteshi Bhardwaj
+                  </div>
+                </div>
+              </div>
+              <i data-lucide="arrow-up-right" class="w-4 h-4 text-slate-500 group-hover:text-brand-400 transition-colors"></i>
+            </a>
+
+            <!-- Location -->
+            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-900/40 border border-slate-800/60 text-xs text-slate-400">
+              <i data-lucide="map-pin" class="w-4 h-4 text-rose-400 shrink-0"></i>
+              <span>JECRC University, Jaipur, Rajasthan, India</span>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Right: Interactive Form -->
+        <div class="lg:col-span-7">
+          <div class="glass-card rounded-2xl p-6 sm:p-8 border border-slate-800 shadow-xl">
+            <h3 class="text-xl font-bold font-display text-white mb-2">Send a Direct Message</h3>
+            <p class="text-xs text-slate-400 mb-6">
+              Send an inquiry directly to my email inbox.
+            </p>
+
+            <div id="formSuccessAlert" class="hidden mb-6 p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-xs flex items-center gap-2">
+              <i data-lucide="sparkles" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+              <span>Thank you! Your email client has been launched with your message.</span>
+            </div>
+
+            <form id="contactForm" onsubmit="handleFormSubmit(event)" class="space-y-4">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1.5">
+                    Your Name <span class="text-rose-400">*</span>
+                  </label>
+                  <input type="text" id="senderName" required placeholder="e.g. Alex Smith" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700/80 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-brand-500 transition-colors" />
+                </div>
+
+                <div>
+                  <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1.5">
+                    Your Email <span class="text-rose-400">*</span>
+                  </label>
+                  <input type="email" id="senderEmail" required placeholder="e.g. alex@example.com" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700/80 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-brand-500 transition-colors" />
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1.5">Subject</label>
+                <input type="text" id="senderSubject" placeholder="e.g. Internship Inquiry / Web Project" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700/80 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-brand-500 transition-colors" />
+              </div>
+
+              <div>
+                <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1.5">
+                  Message <span class="text-rose-400">*</span>
+                </label>
+                <textarea rows="4" id="senderMessage" required placeholder="Write your message here..." class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700/80 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-brand-500 transition-colors resize-none"></textarea>
+              </div>
+
+              <button type="submit" class="w-full py-3.5 px-6 rounded-xl bg-gradient-to-r from-brand-600 via-indigo-600 to-purple-600 hover:from-brand-500 hover:to-purple-500 text-white font-semibold text-sm shadow-lg shadow-brand-500/20 transition-all flex items-center justify-center gap-2 cursor-pointer">
+                <span>Send Message</span>
+                <i data-lucide="send" class="w-4 h-4"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-slate-800/80 bg-[#070a10] py-14">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-slate-800/80 items-center">
+        
+        <div class="md:col-span-5 space-y-3">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-purple-600 flex items-center justify-center font-display font-bold text-white text-lg">
+              HB
+            </div>
+            <div>
+              <span class="font-display font-bold text-xl text-white tracking-tight">Hiteshi Bhardwaj</span>
+              <p class="text-xs text-brand-400 font-medium">B.Tech Student | AI & Technology Enthusiast</p>
+            </div>
+          </div>
+          <p class="text-xs text-slate-400 max-w-sm leading-relaxed">
+            Undergraduate student at JECRC University, pursuing engineering excellence, artificial intelligence research, and impactful web development.
+          </p>
+        </div>
+
+        <div class="md:col-span-4">
+          <div class="text-xs font-semibold text-slate-300 uppercase tracking-wider mb-3">Navigation</div>
+          <div class="grid grid-cols-2 gap-2 text-xs">
+            <a href="#hero" class="text-slate-400 hover:text-white transition-colors">Home</a>
+            <a href="#about" class="text-slate-400 hover:text-white transition-colors">About</a>
+            <a href="#education" class="text-slate-400 hover:text-white transition-colors">Education</a>
+            <a href="#skills" class="text-slate-400 hover:text-white transition-colors">Skills</a>
+            <a href="#projects" class="text-slate-400 hover:text-white transition-colors">Projects</a>
+            <a href="#achievements" class="text-slate-400 hover:text-white transition-colors">Achievements</a>
+            <a href="#contact" class="text-slate-400 hover:text-white transition-colors">Contact</a>
+          </div>
+        </div>
+
+        <div class="md:col-span-3 flex flex-col items-start md:items-end gap-4">
+          <div class="text-xs font-semibold text-slate-300 uppercase tracking-wider">Connect</div>
+          <div class="flex items-center gap-3">
+            <a href="https://www.linkedin.com/in/hiteshi-bhardwaj" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-xl bg-slate-900 border border-slate-800 hover:border-blue-500/50 hover:text-blue-400 text-slate-400 flex items-center justify-center transition-all" aria-label="LinkedIn">
+              <i data-lucide="linkedin" class="w-4 h-4"></i>
+            </a>
+            <a href="https://github.com/hiteshibhardwaj" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-500 hover:text-white text-slate-400 flex items-center justify-center transition-all" aria-label="GitHub">
+              <i data-lucide="github" class="w-4 h-4"></i>
+            </a>
+            <a href="mailto:hiteshibhardwaj.work@gmail.com" class="w-9 h-9 rounded-xl bg-slate-900 border border-slate-800 hover:border-brand-500/50 hover:text-brand-400 text-slate-400 flex items-center justify-center transition-all" aria-label="Email">
+              <i data-lucide="mail" class="w-4 h-4"></i>
+            </a>
+            <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="w-9 h-9 rounded-xl bg-brand-600 hover:bg-brand-500 text-white flex items-center justify-center shadow-md shadow-brand-500/20 transition-all cursor-pointer" title="Back to Top">
+              <i data-lucide="arrow-up" class="w-4 h-4"></i>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+        <div>© 2026 Hiteshi Bhardwaj. All rights reserved.</div>
+        <div class="flex items-center gap-1.5">
+          <span>Engineered with React & Tailwind CSS</span>
+          <span>•</span>
+          <span class="text-brand-400">Ready for Vercel Deployment</span>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- PROJECT MODAL POPUP -->
+  <div id="projectModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
+    <div class="fixed inset-0 bg-black/80 backdrop-blur-md" onclick="closeModal()"></div>
+    <div class="relative w-full max-w-2xl bg-[#0e1422] border border-slate-700/80 rounded-2xl shadow-2xl z-10 overflow-hidden my-8">
+      
+      <div id="modalHeaderBanner" class="h-32 bg-gradient-to-r from-cyan-500 to-blue-600 p-6 flex flex-col justify-between relative">
+        <div class="flex items-center justify-between">
+          <span id="modalCategory" class="px-3 py-1 rounded-full text-xs font-semibold bg-black/40 text-white backdrop-blur-md">Web Development</span>
+          <button onclick="closeModal()" class="w-8 h-8 rounded-full bg-black/40 hover:bg-black/70 text-white flex items-center justify-center transition-colors">
+            ✕
+          </button>
+        </div>
+        <h3 id="modalTitle" class="text-2xl sm:text-3xl font-display font-extrabold text-white">Project Title</h3>
+      </div>
+
+      <div class="p-6 sm:p-8 space-y-6 max-h-[70vh] overflow-y-auto">
+        <div>
+          <h4 class="text-xs uppercase tracking-wider font-semibold text-slate-400 mb-2">Project Overview</h4>
+          <p id="modalDesc" class="text-slate-200 text-sm sm:text-base leading-relaxed"></p>
+        </div>
+
+        <div>
+          <h4 class="text-xs uppercase tracking-wider font-semibold text-slate-400 mb-3 flex items-center gap-1.5">
+            <i data-lucide="sparkles" class="w-3.5 h-3.5 text-amber-400"></i>
+            Key Features & Architecture
+          </h4>
+          <ul id="modalFeatures" class="space-y-2 text-xs sm:text-sm text-slate-300"></ul>
+        </div>
+
+        <div>
+          <h4 class="text-xs uppercase tracking-wider font-semibold text-slate-400 mb-2.5 flex items-center gap-1.5">
+            <i data-lucide="layers" class="w-3.5 h-3.5 text-brand-400"></i>
+            Technologies Used
+          </h4>
+          <div id="modalTech" class="flex flex-wrap gap-2"></div>
+        </div>
+
+        <div class="pt-4 border-t border-slate-800 flex items-center justify-end gap-3">
+          <a href="https://github.com/hiteshibhardwaj" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs sm:text-sm font-semibold transition-all flex items-center gap-2 border border-slate-700">
+            <i data-lucide="github" class="w-4 h-4"></i>
+            <span>GitHub Repository</span>
+          </a>
+          <a href="#contact" onclick="closeModal()" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-brand-600 to-indigo-600 text-white text-xs sm:text-sm font-semibold shadow-md">
+            Discuss Project
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+
+    // Copy Email to Clipboard
+    function copyEmailToClipboard() {
+      const email = 'hiteshibhardwaj.work@gmail.com';
+      navigator.clipboard.writeText(email).then(() => {
+        const copyText = document.getElementById('copyText');
+        copyText.textContent = 'Copied!';
+        setTimeout(() => {
+          copyText.textContent = 'Copy';
+        }, 2000);
+      });
+    }
+
+    // Contact Form Handler
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('senderName').value;
+      const email = document.getElementById('senderEmail').value;
+      const subject = document.getElementById('senderSubject').value || 'Portfolio Contact from ' + name;
+      const message = document.getElementById('senderMessage').value;
+
+      const mailtoUrl = `mailto:hiteshibhardwaj.work@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent("Name: " + name + "\\nEmail: " + email + "\\n\\nMessage:\\n" + message)}`;
+      window.location.href = mailtoUrl;
+
+      document.getElementById('formSuccessAlert').classList.remove('hidden');
+      document.getElementById('contactForm').reset();
+    }
+
+    // Projects Data for Modal
+    const projectsData = {
+      portfolio: {
+        title: "Personal Portfolio Website",
+        category: "Web Development",
+        gradient: "from-cyan-500 to-blue-600",
+        desc: "Designed and engineered an ultra-responsive developer portfolio website using modern frontend technologies. Features include dark glassmorphism visual hierarchy, fluid micro-interactions, responsive mobile menu drawer, and zero-configuration Vercel deployment.",
+        features: [
+          "• Dynamic modern UI with subtle hover and glow effects",
+          "• Mobile-first responsive drawer menu and smooth navigation",
+          "• Dedicated skill cards and filterable achievement showcase",
+          "• One-click email copier with instant toast notification feedback"
+        ],
+        tech: ["React", "Vite", "Tailwind CSS", "JavaScript", "Vercel"]
+      },
+      ai: {
+        title: "AI Website Project",
+        category: "Artificial Intelligence",
+        gradient: "from-purple-500 to-indigo-600",
+        desc: "An intelligent web application that integrates Generative AI to provide smart content assistance, text summarization, and interactive prompt exploration.",
+        features: [
+          "• Context-aware text generation and intelligent summaries",
+          "• Clean conversational UI with streaming indicators",
+          "• Pre-built AI study templates for engineering students",
+          "• Robust error handling and responsive mobile layout"
+        ],
+        tech: ["Artificial Intelligence", "Generative AI", "React", "Python", "API Integration", "Tailwind CSS"]
+      },
+      productivity: {
+        title: "Student Productivity Project",
+        category: "Digital Productivity",
+        gradient: "from-emerald-500 to-teal-600",
+        desc: "A specialized productivity suite designed to help university students organize coursework, conquer procrastination, and structure study habits.",
+        features: [
+          "• Integrated Pomodoro study timer with sound alerts and interval settings",
+          "• Eisenhower matrix task prioritization for exam and assignment planning",
+          "• Daily progress metrics, streak tracking, and study milestone logs",
+          "• Distraction-free minimal workspace with local data persistence"
+        ],
+        tech: ["Digital Productivity", "Web Development", "JavaScript", "Local Storage", "Tailwind CSS"]
+      }
+    };
+
+    function openModal(id) {
+      const data = projectsData[id];
+      if (!data) return;
+
+      document.getElementById('modalTitle').textContent = data.title;
+      document.getElementById('modalCategory').textContent = data.category;
+      document.getElementById('modalDesc').textContent = data.desc;
+      
+      const banner = document.getElementById('modalHeaderBanner');
+      banner.className = `h-32 bg-gradient-to-r ${data.gradient} p-6 flex flex-col justify-between relative`;
+
+      const featuresList = document.getElementById('modalFeatures');
+      featuresList.innerHTML = '';
+      data.features.forEach(f => {
+        const li = document.createElement('li');
+        li.textContent = f;
+        featuresList.appendChild(li);
+      });
+
+      const techDiv = document.getElementById('modalTech');
+      techDiv.innerHTML = '';
+      data.tech.forEach(t => {
+        const span = document.createElement('span');
+        span.className = 'px-3 py-1 rounded-lg text-xs font-medium bg-slate-900 border border-slate-700/80 text-brand-300';
+        span.textContent = t;
+        techDiv.appendChild(span);
+      });
+
+      document.getElementById('projectModal').classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+      lucide.createIcons();
+    }
+
+    function closeModal() {
+      document.getElementById('projectModal').classList.add('hidden');
+      document.body.style.overflow = 'auto';
+    }
+
+    // Achievements Filter
+    function filterAchievements(cat) {
+      document.querySelectorAll('.ach-tab-btn').forEach(btn => {
+        if (btn.getAttribute('data-filter') === cat) {
+          btn.className = "ach-tab-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-medium bg-gradient-to-r from-amber-600 to-orange-600 text-white shadow-md shadow-amber-500/20 scale-105";
+        } else {
+          btn.className = "ach-tab-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-medium bg-slate-900/80 text-slate-400 hover:text-white hover:bg-slate-800 border border-slate-800";
+        }
+      });
+
+      document.querySelectorAll('.ach-card').forEach(card => {
+        if (cat === 'all' || card.getAttribute('data-category') === cat) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    }
+  </script>
+</body>
+</html>
